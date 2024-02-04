@@ -1,0 +1,555 @@
+body {
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: monospace;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100vh;
+    background: url('4-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 
+.slide {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    transition: 5s linear;
+    animation: 15s slide-image infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+} */
+
+
+
+.nav-bar {
+    margin: 0;
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.nav-bar img {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+.bx-menu {
+    color: white;
+    font-size: 50px;
+    visibility: hidden;
+}
+
+
+.nav-list li {
+    display: inline;
+    list-style: none;
+    margin-right: 1cm;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+}
+
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    bottom: -8px;
+    width: 0;
+    left: 0;
+    background-color: rgb(255, 0, 157);
+    transition: 0.5s;
+    transform: scaleX(80%);
+}
+
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+.slogan {
+    position: absolute;
+    top: 300px;
+    color: white;
+}
+
+.slogan p {
+    text-transform: capitalize;
+    font-size: 60px;
+    margin-left: 100px;
+}
+
+.slogan p span {
+    margin-left: 30px;
+}
+
+.slogan .text {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+}
+
+.slogan .t1 {
+    position: absolute;
+    margin-top: 65px;
+}
+
+.t1 {
+    animation: 15s text1 infinite;
+}
+
+.t2 {
+    animation: 15s text2 infinite;
+}
+
+@keyframes text1 {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes text2 {
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.booking-btn {
+    height: 30px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 300px;
+    cursor: pointer;
+
+}
+
+.booking-btn a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: bolder;
+    transition: 0.8s;
+}
+
+
+/* about us page******************************************************************************** */
+
+.about {
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.about h1 span {
+    color: yellow;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left {
+    max-width: 550px;
+}
+
+.left h4 {
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+.left p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 0.7cm;
+}
+
+.right .img-box {
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 15px 70px 0 0;
+    transition: 1s all ease;
+}
+
+.right .img-box:hover {
+    scale: 1.2;
+}
+
+/*menu items page********************************************************************* */
+
+.menu-page {
+    color: white;
+    font-size: 30px;
+    margin: 0px 0 0 20px;
+}
+
+.menu-page h1 span {
+    color: yellow;
+}
+
+.menu-page p {
+    color: yellow;
+    word-spacing: 0.1cm;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 50px;
+}
+
+.container .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 50px;
+}
+
+.container .box-container .box {
+    background-color: white;
+    opacity: 0.7;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s all ease;
+    display: none;
+}
+
+.container .box-container .box:nth-child(1),
+.container .box-container .box:nth-child(2),
+.container .box-container .box:nth-child(3) {
+    display: inline-block;
+}
+
+.box-container .box:hover {
+    background-color: yellow;
+}
+
+.box-container .box .menu-pic {
+    overflow: hidden;
+}
+
+.box-container .box:hover img {
+    scale: 1.2;
+}
+
+.box-container .box .menu-pic img {
+    width: 100%;
+    object-fit: cover;
+    transition: 1s all ease;
+}
+
+.box-container .box img {
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.menu-name h4 {
+    color: black;
+    text-transform: capitalize;
+}
+
+#more-btn {
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-top: 20px;
+    transition: 1s;
+    height: 1cm;
+    width: 3cm;
+    border: 2px solid white;
+}
+
+#more-btn:hover {
+    background-color: red;
+    border: 2px solid white;
+}
+
+/*  reservation page ******************************************************************** */
+.reservation {
+    color: white;
+    margin: 0px 0 0 20px;
+}
+
+.reservation h1 {
+    font-size: 60px;
+}
+
+.reserve-block {
+    height: auto;
+    max-width: 750px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+}
+
+.reserve-block form {
+    margin: 20px auto;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.reserve-block form label span {
+    color: red;
+    font-size: 15px;
+}
+
+.reserve-block form input,
+textarea {
+    text-transform: capitalize;
+    margin: 2px 0 0 0px;
+    height: 25px;
+    width: 450px;
+    background-color: gray;
+    opacity: 0.5;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+}
+
+#table-btn {
+    height: 25px;
+    width: 450px;
+    font-size: 20px;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+    transition: 1.5s ease;
+}
+
+#table-btn:hover {
+    background-color: red;
+    border: 2px solid white;
+}
+
+/* contact page ************************************************************************ */
+
+.contact {
+    /* width: auto; */
+    color: white;
+    font-size: 30px;
+    margin: 0px 0 0 20px;
+}
+
+.contact h1 span {
+    color: yellow;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.contact h6 {
+    margin-left: 10px;
+    text-decoration: underline yellow;
+}
+
+
+.contact-icon ul {
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    height: 60px;
+    width: 60px;
+
+}
+
+.contact-icon ul li {
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 35px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.contact-icon ul li:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.contact-name {
+    position: relative;
+    left: 170px;
+    bottom: 104px;
+
+}
+
+.contact-name p {
+    margin: 61px 0 0 0;
+    font-size: 25px;
+}
+
+
+
+
+@media (max-width:800px) {
+
+    .about h1,
+    .menu-page h1,
+    .reservation h1,
+    .contact h1 {
+        font-size: 40px;
+    }
+
+    .slide-container {
+        background: none;
+        width: 100%;
+        height: 100vh;
+        background: url('bg-800.jpg');
+        background-size: cover;
+    }
+
+    .about-grid {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar {
+        width: 100vw;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-list {
+        height: 400px;
+        margin-top: -15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        visibility: hidden;
+    }
+
+    .bx-menu {
+        position: absolute;
+        top: 50px;
+        right: 80px;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin-top: 8px;
+    }
+
+    .slogan {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slogan p {
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    .slogan p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .booking-btn {
+        display: flex;
+        align-items: center;
+        margin: 100px auto;
+    }
+}
+
+@media (max-width:400px) {
+
+    .slogan p {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width:550px) {
+
+    .reserve-block form input,
+    textarea {
+        max-width: 300px;
+    }
+
+    #table-btn {
+        max-width: 300px;
+    }
+
+    .slide-container {
+        background-size: cover;
+        background-position: center;
+        width: 150%;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    .left p {
+        margin-right: 0;
+    }
+    .contact .contact-name{
+        max-width: 400px;
+    }
+}
